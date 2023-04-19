@@ -1,0 +1,12 @@
+  %function meshdata=readDatMesh(fname)
+  %
+  %Read a mesh file as given by the output format .dat of salome
+  %The first line specifies the number of vertices and elements
+  %followed by rows with 4 elements for vertex index and coordinates, then
+  %rows with four elements specifying edges (not used here) and finally rows
+  %with five elements, the last three of which give vertex indices
+  %
+  % Output is a data structure with fields:
+  %   verts: Nv x 3 array, each row tells vertex coordinates in meters
+  %   cells: Nc x 5 array, each row tells cell type (2 for triangle), index
+  %       of the three vertices defining each triangle, and a zero.
